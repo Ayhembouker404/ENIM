@@ -8,11 +8,13 @@
   <link rel="shortcut icon" href="images/gift.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- Document Title -->
   <title>FLOWERS</title>
 </head>
 
 <body class="not-loaded">
 
+  <!-- THESE ELEMENTS ARE FIXED AND DO NOT SCROLL -->
   <div class="night"></div>
   <div class="flowers">
     <div class="flower flower--1">
@@ -312,12 +314,15 @@
   </div>
 
 
+  <!-- THIS IS THE NEW SCROLLING CONTAINER -->
   <div class="scroll-content" id="scroll-container">
 
+    <!-- PAGE 1: TITLE -->
     <div class="page" id="page-1">
       <h1 class="title"><span id="title"></span></h1>
     </div>
 
+    <!-- PAGE 2: SCHEDULE -->
     <div class="page" id="page-2">
       <div id="schedule-container">
         <h2>Event Schedule</h2>
@@ -326,33 +331,40 @@
             <tr>
               <th>Time</th>
               <th>Day 1</th>
+              <th>Day 2</th>
+              <th>Day 3</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>09:00 AM</td>
               <td>Opening Ceremony</td>
-              
+              <td>Keynote Speech</td>
+              <td>Workshops</td>
             </tr>
             <tr>
               <td>11:00 AM</td>
               <td>Panel Discussion: Tech</td>
-              
+              <td>Workshop: AI</td>
+              <td>Networking</td>
             </tr>
             <tr>
               <td>01:00 PM</td>
               <td>Lunch Break</td>
-            
+              <td>Lunch Break</td>
+              <td>Lunch Break</td>
             </tr>
             <tr>
               <td>02:00 PM</td>
               <td>Workshop: Web Dev</td>
-              
+              <td>Panel Discussion: Startups</td>
+              <td>Hackathon</td>
             </tr>
             <tr>
               <td>04:00 PM</td>
               <td>Closing Remarks</td>
-              
+              <td>Networking Event</td>
+              <td>Awards Ceremony</td>
             </tr>
           </tbody>
         </table>
@@ -360,8 +372,14 @@
     </div>
 
   </div>
-  </body>
+  <!-- END OF SCROLLING CONTAINER -->
+
+  <!-- ======== NEW SCROLL BUTTON ======== -->
+  <button id="scroll-next-btn">next</button>
+
+</body>
 
 </html>
 
+<!-- Import Javascript -->
 <script src="js/main.js"></script>
