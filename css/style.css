@@ -1325,4 +1325,36 @@ body {
   animation-play-state: paused !important;
 }
 
+/* ======== NEW BUTTON STYLE ======== */
+
+#scroll-next-btn {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 100; /* On top of everything */
+  
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Makes it a circle */
+  
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#scroll-next-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+
 /*# sourceMappingURL=style.css.map */
