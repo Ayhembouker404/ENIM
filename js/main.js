@@ -18,8 +18,11 @@ onload = () => {
     // Start the typing animation
     appendTitle();
 
-    // Set up the NEW scroll listener
+    // Set up the scroll listener
     setupScrollListener();
+    
+    // ======== NEW: Set up the next button ========
+    setupNextButton();
 
     clearTimeout(c);
   }, 1000);
@@ -34,7 +37,6 @@ function setupScrollListener() {
   const titlePage = document.getElementById('page-1');
 
   if (!scroller || !titlePage) {
-    console.error("Scroller or Title Page not found!");
     return;
   }
 
@@ -59,5 +61,30 @@ function setupScrollListener() {
 
     // Apply the opacity to the title page
     titlePage.style.opacity = opacity;
+  });
+}
+
+/**
+ * ======== NEW FUNCTION ========
+ * Sets up the click listener for the 'next' button
+ * to scroll smoothly to the schedule.
+ */
+function setupNextButton() {
+  const nextBtn = document.getElementById('scroll-next-btn');
+  const scroller = document.getElementById('scroll-container');
+  const schedulePage = document.getElementById('page-2');
+
+  if (!nextBtn || !scroller || !schedulePage) {
+    console.error("Next button, scroller, or schedule page not found!");
+    return;
+  }
+  
+  // Add the click event
+  nextBtn.addEventListener('click', () => {
+    // Scroll the main scroller container to the top of page 2
+    scroller.scrollTo({
+      top: schedulePage.offsetTop,
+      behavior: 'smooth'
+    });
   });
 }
