@@ -73,7 +73,7 @@ function setupNextButton() {
   const nextBtn = document.getElementById('scroll-next-btn');
   const scroller = document.getElementById('scroll-container');
   const schedulePage = document.getElementById('page-2');
-  nextBtn.style.opacity = nextopac
+  nextBtn.style.opacity = nextopac;
   if (!nextBtn || !scroller || !schedulePage) {
     console.error("Next button, scroller, or schedule page not found!");
     return;
@@ -85,8 +85,8 @@ function setupNextButton() {
     scroller.scrollTo({
       top: schedulePage.offsetTop,
       behavior: 'smooth'
-    nextopac = 0
-    });
     
+    });
+    nextopac = 0;
   });
 }
