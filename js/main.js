@@ -85,7 +85,7 @@ function setupNextButton() {
     scroller.scrollTo({
       top: schedulePage.offsetTop,
       behavior: 'smooth'
-      nextopac = 0
+    nextopac = 0
     });
     
   });
