@@ -1329,7 +1329,7 @@ body {
 
 #scroll-next-btn {
   position: fixed;
-  top: 40px;
+  top: 100px;
   right: 40px;
   z-index: 100; /* On top of everything */
   
