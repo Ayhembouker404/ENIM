@@ -35,8 +35,11 @@ onload = () => {
 function setupScrollListener() {
   const scroller = document.getElementById('scroll-container');
   const titlePage = document.getElementById('page-1');
+  // === NEW: Get the button ===
+  const nextBtn = document.getElementById('scroll-next-btn');
 
-  if (!scroller || !titlePage) {
+  // === MODIFIED: Added check for nextBtn ===
+  if (!scroller || !titlePage || !nextBtn) {
     return;
   }
 
@@ -61,6 +64,13 @@ function setupScrollListener() {
 
     // Apply the opacity to the title page
     titlePage.style.opacity = opacity;
+
+    // === NEW: Show/hide the 'next' button ===
+    if (scrollTop > 100) { // If scrolled more than 100px
+      nextBtn.classList.add('btn-hidden');
+    } else { // If at the top
+      nextBtn.classList.remove('btn-hidden');
+    }
   });
 }
 
@@ -73,7 +83,7 @@ function setupNextButton() {
   const nextBtn = document.getElementById('scroll-next-btn');
   const scroller = document.getElementById('scroll-container');
   const schedulePage = document.getElementById('page-2');
-  nextBtn.style.opacity = nextopac;
+
   if (!nextBtn || !scroller || !schedulePage) {
     console.error("Next button, scroller, or schedule page not found!");
     return;
@@ -85,8 +95,6 @@ function setupNextButton() {
     scroller.scrollTo({
       top: schedulePage.offsetTop,
       behavior: 'smooth'
-    
     });
-    nextopac = 0;
   });
 }
