@@ -1329,7 +1329,7 @@ body {
 
 #scroll-next-btn {
   position: fixed;
-  top: 600px;
+  top: 40px;
   right: 40px;
   z-index: 100; /* On top of everything */
   
@@ -1347,6 +1347,8 @@ body {
   text-transform: uppercase;
   
   cursor: pointer;
+  /* === MODIFIED === */
+  /* Added transition for smooth fade and scale */
   transition: all 0.3s ease;
 }
 
@@ -1354,6 +1356,13 @@ body {
   background: rgba(255, 255, 255, 0.1);
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* ======== NEW CLASS TO HIDE BUTTON ======== */
+.btn-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
 }
 
 
